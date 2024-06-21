@@ -1,4 +1,12 @@
 package br.com.enu;
 
-public class StatusTask {
+public enum StatusTask {
+
+    STARTED,
+    FINISHED,
+    HIGH,
+    MEDIUM,
+    LOW
+
+
 }
