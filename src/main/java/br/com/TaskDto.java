@@ -1,18 +1,19 @@
 package br.com;
 
-
 import lombok.Data;
 
 import java.time.LocalDate;
 
-public record TaskDto(
+@Data
+public class TaskDto {
 
-        String id,
-        String name,
-        LocalDate dayOfTask,
-        String subject,
-        String priority,
-        String status) {
+    private String name;
+    private LocalDate dayOfTask;
+    private String subject;
+    private String priority;
+    private String status;
+    private boolean notification;
+
 }
 
 

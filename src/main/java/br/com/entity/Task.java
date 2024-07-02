@@ -6,33 +6,30 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.lang.annotation.Documented;
 import java.time.LocalDate;
 
-//@NoArgsConstructor
-//@AllArgsConstructor
-//@Data
-//@Entity
 @Document(collection = "TB_TASK")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Task {
 
     @Id
-    String id; //mongo usa string por patrão oada ID
+    private String id; //mongo usa string por patrão oada ID
 
     @NotBlank
-    String name;
+    private String name;
 
-    LocalDate dayOfTask;
-
-    @NotBlank
-    String subject;
+    private LocalDate dayOfTask;
 
     @NotBlank
-    String priority;
+    private String subject;
 
     @NotBlank
-    String status;
+    private String priority;
 
-    boolean notification;
+    @NotBlank
+    private String status;
+
+    private boolean notification;
 }
